@@ -5,6 +5,9 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+	display: flex; /* we making the body flex because we want the content to take all the space */
+	flex-direction: column; /* since added flex the items will be row we want them to be column */
+
 }
 
 img {
@@ -16,6 +19,8 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+	padding: 8px;
+	margin-top: 12px;
 }
 
 input {
@@ -23,4 +28,34 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+.left-links, .right-links {    /*made left--links and right-links rules because we want to remove the bullet points */
+	list-style-type: none;
+	display: flex;
+	gap: 20px;
+	padding: 20px;
+	margin: 8px;
+}
+
+.footer {
+	display: flex;
+	background-color: #eeeeee;
+	justify-content: space-between; /* the links would be far left */
+}
+
+.header {
+	display: flex;
+	justify-content: space-between; /*the links would be far left and right */
+}
+.content {
+	display: flex;
+	flex-direction: column; /* made it column since default is row and we dont want them horizontally */
+	flex: 1; /* we want it to grow and take the available space and push the footer down */
+	justify-content: center;
+	align-items: center;
+}
+
+.links {
+	text-decoration: none; /* removes the links underline */
 }
